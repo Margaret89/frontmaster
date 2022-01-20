@@ -1,0 +1,78 @@
+// Gotham Pro
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('#{$path-fonts}/GothamPro/GothamPro-BoldItalic.eot');
+	src: local('Gotham Pro Bold Italic'), local('GothamPro-BoldItalic'),
+		url('#{$path-fonts}/GothamPro/GothamPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/GothamPro/GothamPro-BoldItalic.woff') format('woff'),
+		url('#{$path-fonts}/GothamPro/GothamPro-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('#{$path-fonts}/GothamPro/GothamPro-Italic.eot');
+	src: local('Gotham Pro Italic'), local('GothamPro-Italic'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Italic.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Italic.woff') format('woff'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('#{$path-fonts}/GothamPro/GothamPro-Bold.eot');
+	src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Bold.woff') format('woff'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('#{$path-fonts}/GothamPro/GothamPro.eot');
+	src: local('Gotham Pro'), local('GothamPro'),
+		url('#{$path-fonts}/GothamPro/GothamPro.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/GothamPro/GothamPro.woff') format('woff'),
+		url('#{$path-fonts}/GothamPro/GothamPro.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('#{$path-fonts}/GothamPro/GothamPro-BlackItalic.eot');
+	src: local('Gotham Pro Black Italic'), local('GothamPro-BlackItalic'),
+		url('#{$path-fonts}/GothamPro/GothamPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/GothamPro/GothamPro-BlackItalic.woff') format('woff'),
+		url('#{$path-fonts}/GothamPro/GothamPro-BlackItalic.ttf') format('truetype');
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('#{$path-fonts}/GothamPro/GothamPro-Black.eot');
+	src: local('Gotham Pro Black'), local('GothamPro-Black'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Black.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Black.woff') format('woff'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+// KoHo
+@font-face {
+	font-family: 'KoHo';
+	src: url('#{$path-fonts}/KoHo/KoHo-Regular.eot');
+	src: local('KoHo Regular'), local('KoHo-Regular'),
+		url('#{$path-fonts}/KoHo/KoHo-Regular.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/KoHo/KoHo-Regular.woff') format('woff'),
+		url('#{$path-fonts}/KoHo/KoHo-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
