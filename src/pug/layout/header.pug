@@ -1,4 +1,40 @@
 header.header
-	.container
-		.row
-			.col-12 header
+	span.ic-hamburger.js-open-menu
+		span
+
+	.header__logo-wrap
+		a.header__logo(href='/')
+			img(src='assets/img/logo.png' alt='')
+		.header__phone
+			a(href="tel:+74950010056")  +7 (495) 001-00-56
+
+	nav.main-menu
+		ul.main-menu__list
+			-
+				var list=[
+					{text:'Каталог', status:'active'},
+					{text:'Услуги монтажа'},
+					{text:'Наши работы'},
+					{text:'Дизайн проекты'},
+					{text:'Галерея вдохновения'},
+					{text:'Отзывы'},
+					{custom:'1'},
+					{custom:'2'},
+					{text:'Акции'},
+					{text:'Контакт'},
+				]
+			each item in list
+				li.main-menu__item(class=item.status?'active':'')
+					a(href="#").main-menu__link= item.text
+						if(item.custom == '1')
+							|О&nbsp;монтаже
+						if(item.custom == '2')
+							|О&nbsp;компании
+	
+	.header__contacts
+		.header__phone
+			a(href='tel:+74950010056') +7 (495) 001-00-56
+		.header__callback
+			a(href='#') Заказать обратный звонок
+		.header__city
+			a(href='#') Ваш город: Москва

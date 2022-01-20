@@ -65,6 +65,28 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('#{$path-fonts}/GothamPro/GothamPro-Light.eot');
+	src: local('Gotham Pro Light'), local('GothamPro-Light'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Light.woff') format('woff'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('#{$path-fonts}/GothamPro/GothamPro-LightItalic.eot');
+	src: local('Gotham Pro Light Italic'), local('GothamPro-LightItalic'),
+		url('#{$path-fonts}/GothamPro/GothamPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/GothamPro/GothamPro-LightItalic.woff') format('woff'),
+		url('#{$path-fonts}/GothamPro/GothamPro-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
 // KoHo
 @font-face {
 	font-family: 'KoHo';

@@ -1,0 +1,51 @@
+/* main-menu */
+.main-menu{
+	&__list,
+	&__item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__list{display: flex;}
+	&__item{margin: 0 5px;}
+
+	&__link{
+		min-width: 80px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include font(normal, bold, 1.8rem, 1, #000);
+		text-align: center;
+		text-decoration: none;
+		padding: 5px 15px;
+		position: relative;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__link::after{
+		content: '';
+		display: inline-block;
+		width: 80px;
+		height: 3px;
+		background: $color-blue;
+		position: absolute;
+		bottom: -7px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		transition: width 0.2s ease 0s;
+	}
+
+	&__link:hover,
+	&__item.active &__link{
+		color: #fff;
+		background: $color-blue;
+	}
+
+	&__link:hover::after,
+	&__item.active &__link::after{
+		width: 0;
+	}
+}
