@@ -1,4 +1,130 @@
 footer.footer
-	.container
-		.row
-			.col-12 footer
+	.offer-block
+		.offer-block__title Обратиться к&nbsp;руководителю
+		.offer-block__text Если у вас возникли вопросы, предложения или жалобы, Вы&nbsp;можете написать об этом коммерческому директору компании
+
+		a.btn.btn_blue.btn_shadow(href='#') Обратиться<br>к руководителю
+				
+	.footer__main-wrap
+		.container-fluid
+			.footer__main
+				.footer__item
+					a.footer__logo(href='#')
+						img(src='assets/img/logo-white.svg' alt='')
+
+					.footer-contacts
+						.footer-contacts__item
+							.footer-contacts__icon
+								+svg('ic-map','ic-map', '18', '24')
+							.footer-contacts__text
+								.footer-contacts__link
+									a(href="#").footer-contacts__address Офисы продаж
+
+						.footer-contacts__item
+							.footer-contacts__icon
+								+svg('ic-phone','ic-phone', '24', '24')
+							.footer-contacts__text
+								.footer-contacts__link
+									a(href="tel:+74996483710") +7 (499) 648-37-10
+								a.btn.btn_border.btn_small(href='#') Заказать звонок
+
+						.footer-contacts__item
+							.footer-contacts__icon
+							.footer-contacts__text
+								.footer-contacts__link
+									a(href="mailto:msk@frontmaster.su") msk@frontmaster.su
+								a.btn.btn_border.btn_small(href='mailto:msk@frontmaster.su') Написать нам
+
+				.footer__item
+					ul.footer-menu
+						li.footer-menu__item
+							a.footer-menu__link(href="#") Каталог продукции
+
+							ul.footer-menu__sub
+								-
+									var list=[
+										{text:'Кровля'},
+										{text:'Фасад'},
+										{text:'Сайдинг бесплатно'},
+										{text:'Водосточные системы'},
+										{text:'Утепление и изоляция'},
+										{text:'Заборы'},
+										{text:'Ландшафт'},
+										{text:'Прочее'},
+									]
+								each item in list
+									li.footer-menu__sub-item
+										a.footer-menu__sub-link(href="#")= item.text
+					
+				.footer__item
+					ul.footer-menu
+						-
+							var list=[
+								{text:'О компании'},
+								{text:'Каталог продукции'},
+								{text:'Сотрудничество'},
+								{text:'Цены'},
+								{text:'Документация'},
+							]
+						each item in list
+							li.footer-menu__item
+								a(href="#").footer-menu__link= item.text
+
+				.footer__item
+					ul.footer-menu
+						-
+							var list=[
+								{text:'Фотогалерея'},
+								{text:'Контакты'},
+								{text:'Карта сайта'},
+								{text:'Оплата'},
+							]
+						each item in list
+							li.footer-menu__item
+								a.footer-menu__link(href="#")= item.text
+				
+				.footer__item
+					ul.footer-menu
+						-
+							var list=[
+								{icon:'ic-calc', icon_width:'24', icon_height:'24', text:'Расчет'},
+								{icon:'ic-person', icon_width:'20', icon_height:'20', stroke:'true', text:'Замер'},
+								{icon:'ic-building', icon_width:'20', icon_height:'22', text:'Визуализация'},
+								{icon:'ic-setting', icon_width:'18', icon_height:'18', text:'Монтаж'},
+								{icon:'ic-delivery', icon_width:'23', icon_height:'14', text:'ДОСТАВКА'},
+								
+							]
+						each item in list
+							li.footer-menu__item
+								a.footer-menu__link(href="#")
+									span.footer-menu__icon
+										if(item.stroke)
+											+svg(item.icon, item.icon+' ic-stroke', item.icon_width, item.icon_height)
+										else
+											+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+									= item.text
+
+					.footer__note Доставка и самовывоз: Дмитров, Сергиев Посад, Павловский Посад, Коломна.
+
+	.footer__soc-wrap
+		.container-fluid
+			.footer__soc
+				form.form-subscribe
+					.form-subscribe__content
+						.form-subscribe__label Подписатьсяна рассылку:
+						input(type="text", placeholder="Введите ваш E-mail")
+						input.btn(type="submit", value="Подписаться")
+						
+				.social
+					a(href="#").social__item
+						+svg('ic-fb','ic-fb', '18', '30')
+					a(href="#").social__item
+						+svg('ic-vk','ic-vk', '30', '19')
+					a(href="#").social__item
+						+svg('ic-youtube','ic-youtube', '30', '23')
+					a(href="#").social__item
+						+svg('ic-in','ic-in', '30', '32')
+
+	.footer__copyright
+		.container-fluid
+			| © 2009-2019 ООО “ФРОНТМАСТЕР” Сайт не является публичной оферой. Для получения информации о стоимости обратитесь в поддержку компании

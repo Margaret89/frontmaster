@@ -87,6 +87,12 @@ main{
 	margin: 0 auto;
 }
 
+.container-fluid{
+	width: 100%;
+	padding: 0 60px;
+	margin: 0 auto;
+}
+
 
 .btn,
 input[type="submit"].btn,
@@ -149,6 +155,12 @@ button.btn_border{
 .btn.btn_shadow:hover{background: $color-yellow-hover;}
 .btn.btn_blue.btn_shadow:hover{background: $color-blue-hover;}
 
+.btn_small,
+input[type="submit"].btn_small,
+button.btn_small{
+	height: 4.5rem;
+}
+
 .btn{
 	.icon{
 		fill: $color-text;
@@ -176,3 +188,29 @@ button.btn_border{
 .text-justify{text-align: justify !important;}
 .text-uppercase{text-transform: uppercase !important;}
 .text-bold {font-weight: 700 !important;}
+
+
+.d-none{display: none;}
+.d-block{display: block;}
+.d-inline{display: inline;}
+.d-inline-block{display: inline-block;}
+.d-flex{display: flex;}
+.d-inline-flex{display: inline-flex;}
+
+@media (min-width: 992px) {
+	.d-lg-none{display: none;}
+	.d-lg-block{display: block;}
+	.d-lg-inline{display: inline;}
+	.d-lg-inline-block{display: inline-block;}
+	.d-lg-flex{display: flex;}
+	.d-lg-inline-flex{display: inline-flex;}
+}
+
+@media (min-width: 768px) {
+	.d-md-none{display: none;}
+	.d-md-block{display: block;}
+	.d-md-inline{display: inline;}
+	.d-md-inline-block{display: inline-block;}
+	.d-md-flex{display: flex;}
+	.d-md-inline-flex{display: inline-flex;}
+}
