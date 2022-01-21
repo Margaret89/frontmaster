@@ -26,7 +26,7 @@ footer.footer
 							.footer-contacts__text
 								.footer-contacts__link
 									a(href="tel:+74996483710") +7 (499) 648-37-10
-								a.btn.btn_border.btn_small(href='#') Заказать звонок
+								a.btn.btn_border.btn_small(data-fancybox='' data-src='#feadback' href='javascript:;') Заказать звонок
 
 						.footer-contacts__item
 							.footer-contacts__icon
@@ -128,3 +128,31 @@ footer.footer
 	.footer__copyright
 		.container-fluid
 			| © 2009-2019 ООО “ФРОНТМАСТЕР” Сайт не является публичной оферой. Для получения информации о стоимости обратитесь в поддержку компании
+
+#feadback(style='display: none;')
+	.popup-form
+		.js-valid-form
+			form.form-site
+				.form-site__title Обратный звонок
+				
+				.form-site__content
+					.form-site__item.js-form-site-item
+						.form-site__field
+							input(type="text", required="required", placeholder="Имя*")
+
+					.form-site__item.js-form-site-item
+						.form-site__field
+							input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+				.form-site__btn
+					input(type="submit", value="Отправить").btn.js-btn-submit
+
+				.form-site__note Нажимая на кнопку "Отправить", вы соглашаетесь с правилами обработки данных
+
+#msg-success(style='display: none;')
+	.success-alert.js-success-alert
+		.success-alert__icon
+			+svg('ic-tick-circle','ic-tick-circle', '50', '50')
+
+		.success-alert__title.js-success-alert-title Ваше сообщение отправлено!
+		.success-alert__text.js-success-alert-text В ближайшее время с вами свяжется наш менеджер и обсудит все детали.

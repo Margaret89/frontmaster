@@ -1,8 +1,7 @@
 import $ from 'jquery';
-// import '@fancyapps/fancybox'
-// import 'bootstrap/js/dist/modal';
+import '@fancyapps/fancybox'
 // import 'slick-slider/slick/slick.min.js';
 // import 'select2';
-// import Inputmask from "inputmask";
+import Inputmask from "inputmask";
 
-export {$};
+export {$, Inputmask};
