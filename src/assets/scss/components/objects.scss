@@ -1,0 +1,84 @@
+/*-------------- objects -----------------*/
+.objects{
+	margin: 84px 0 60px;
+
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		max-width: 1602px;
+		margin: 0 auto;
+	}
+
+	&__info{
+		flex-shrink: 0;
+		width: 317px;
+		margin-right: 114px;
+	}
+
+	&__map{width: 100%;}
+
+	.sort{margin: -5px 0 36px 20px;}
+	h2, .h2{margin-bottom: 7rem;}
+}
+
+.sort{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	&__label{
+		@include font(normal, normal, 1.6rem, 1.15, $color-text);
+		margin-right: 25px;
+	}
+
+	&__item{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 72px;
+		padding: 4px 7px;
+		border-radius: 3px;
+		background: $color-yellow;
+		@include font(normal, normal, 1.6rem, 1, $color-text);
+		text-decoration: none;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		cursor: pointer;
+		transition: background 0.2s ease 0s;
+
+		.icon{
+			flex-shrink: 0;
+			fill: $color-text;
+			margin-left: 10px;
+		}
+	}
+
+	&__item:not(:last-child){margin-right: 16px;}
+	&__item:hover{background: $color-yellow-hover;}
+}
+
+.objects-list{
+	border-right: 1px solid rgba(25,27,29,0.2);
+
+	&__item{
+		display: flex;
+		align-items: center;
+		padding: 10px 10px 10px 20px;
+		border-bottom: 1px solid rgba(25,27,29,0.2);
+	}
+
+	&__num{
+		flex-shrink: 0;
+		width: 40px;
+		padding: 3px;
+		border-radius: 3px;
+		background: $color-yellow;
+		@include font(normal, bold, 1.6rem, 1, $color-text);
+		text-align: center;
+		margin-right: 22px;
+	}
+
+	&__text{
+		@include font(normal, bold, 1.6rem, 1.15, $color-text);
+	}
+}

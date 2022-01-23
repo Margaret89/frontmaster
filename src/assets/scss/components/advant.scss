@@ -1,0 +1,33 @@
+/*-------------- advant -----------------*/
+.advant-wrap{margin: 47px 0;}
+
+.advant{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -25px;
+	margin-right: -25px;
+
+	&__item{
+		display: inline-flex;
+		align-items: center;
+		margin: 25px;
+	}
+
+	&__icon{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 88px;
+		height: 88px;
+		border-radius: 50%;
+		background: $color-blue;
+		margin-right: 16px;
+
+		.icon{fill: #fff;}
+	}
+
+	&__text{
+		@include font(normal, bold, 2.4rem, 1.4, $color-text);
+	}
+}

@@ -87,6 +87,28 @@
 	font-style: italic;
 }
 
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('#{$path-fonts}/GothamPro/GothamPro-Medium.eot');
+	src: local('Gotham Pro Medium'), local('GothamPro-Medium'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Medium.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Medium.woff') format('woff'),
+		url('#{$path-fonts}/GothamPro/GothamPro-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('#{$path-fonts}/GothamPro/GothamPro-MediumItalic.eot');
+	src: local('Gotham Pro Medium Italic'), local('GothamPro-MediumItalic'),
+		url('#{$path-fonts}/GothamPro/GothamPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/GothamPro/GothamPro-MediumItalic.woff') format('woff'),
+		url('#{$path-fonts}/GothamPro/GothamPro-MediumItalic.ttf') format('truetype');
+	font-weight: 500;
+	font-style: italic;
+}
+
 // KoHo
 @font-face {
 	font-family: 'KoHo';
@@ -96,5 +118,16 @@
 		url('#{$path-fonts}/KoHo/KoHo-Regular.woff') format('woff'),
 		url('#{$path-fonts}/KoHo/KoHo-Regular.ttf') format('truetype');
 	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'KoHo';
+	src: url('#{$path-fonts}/KoHo/KoHo-Bold.eot');
+	src: local('KoHo Bold'), local('KoHo-Bold'),
+		url('#{$path-fonts}/KoHo/KoHo-Bold.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/KoHo/KoHo-Bold.woff') format('woff'),
+		url('#{$path-fonts}/KoHo/KoHo-Bold.ttf') format('truetype');
+	font-weight: bold;
 	font-style: normal;
 }

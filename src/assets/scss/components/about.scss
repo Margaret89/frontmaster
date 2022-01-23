@@ -1,0 +1,15 @@
+/*-------------- about -----------------*/
+.about{
+	margin: 52px 0;
+
+	&__content{
+		display: flex;
+		align-items: center;
+	}
+
+	&__img{
+		flex-shrink: 0;
+		max-width: 50%;
+		margin-left: 45px;
+	}
+}

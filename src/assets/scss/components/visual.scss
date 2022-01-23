@@ -1,0 +1,45 @@
+/*-------------- visual -----------------*/
+.visual-wrap{
+	margin: 48px 0;
+
+	h2, .h2{
+		max-width: 1000px;
+		margin: 0 auto 75px;
+	}
+}
+
+.visual{
+	display: flex;
+	justify-content: center;
+
+	&__item{margin-right: 30px;}
+
+	.form-site{
+		flex-shrink: 0;
+		width: 420px;
+		height: 100%;
+	}
+}
+
+.price-list-wrap{
+	max-width: 1510px;
+	margin: 70px auto 0;
+
+	h2,.h2{
+		max-width: none;
+		text-align: left;
+		margin: 0 auto 20px;
+	}
+
+	&__content{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.form-calc-wrap{
+		flex-shrink: 0;
+		margin-left: 34px;
+	}
+
+	.form-calc{min-height: 520px;}
+}

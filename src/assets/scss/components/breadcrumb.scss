@@ -1,0 +1,28 @@
+/*-------------- breadcrumb -----------------*/
+.breadcrumb{
+	&,
+	&__item{
+		@include reset-list;
+	}
+
+	&{
+		display: inline-flex;
+		flex-wrap: wrap;
+		margin: 50px 35px 55px;
+		background: $color-blue;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	&__item{
+		@include font(normal, bold, 1.8rem, 1.2, $color-yellow);
+		padding: 8px 20px;
+
+		a{
+			color: #fff;
+			text-decoration: none;
+			transition: color 0.2s ease 0s;
+		}
+
+		a:hover{color: $color-yellow;}
+	}
+}

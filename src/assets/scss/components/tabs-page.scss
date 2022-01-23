@@ -1,0 +1,170 @@
+/*-------------- tabs-page -----------------*/
+.tabs-page{
+	margin-left: 22px;
+	margin-right: 22px;
+	border: 1px solid $color-blue;
+
+	&__list,
+	&__item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__list{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 36px;
+		background: $color-blue;
+		padding: 14px 0;
+		margin: -1px -22px 0;
+	}
+
+	&__item{
+		display: inline-block;
+		width: 100%;
+		@include font(normal, normal, 1.8rem, 1.2, #fff);
+		text-align: center;
+		text-decoration: none;
+		cursor: pointer;
+		margin: 0 20px;
+		transition: color 0.2s ease 0s;
+	}
+
+	&__item:hover,
+	&__item.active{
+		font-weight: bold;
+		color: $color-yellow;
+	}
+
+	&__content-item{
+		display: none;
+		padding: 36px 55px;
+
+		p:last-child{margin-bottom: 0;}
+	}
+
+	&_mix &__item:first-child{
+		flex-shrink: 0;
+		width: 298px;
+	}
+
+	.material-card-list{
+		position: relative;
+		margin-bottom: -10px;
+
+		&::after{
+			content: '';
+			display: inline-block;
+			width: calc(100% - 90px);
+			height: 1px;
+			background: $color-blue;
+			position: absolute;
+			bottom: 25px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+	}
+
+	.tabs-page-vert{margin-left: -77px;}
+}
+
+.tabs-page-vert{
+	display: flex;
+
+	&__list,
+	&__item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__list{
+		flex-shrink: 0;
+		width: 298px;
+		margin-right: 64px;
+	}
+
+	&__item{
+		display: block;
+		@include font(normal, normal, 1.8rem, 1.2, #fff);
+		text-align: center;
+		text-decoration: none;
+		background: $color-blue;
+		padding: 14px 20px;
+		cursor: pointer;
+		transition: color 0.2s ease 0s;
+	}
+
+	&__item:not(:last-child){margin-bottom: 36px;}
+
+	&__item:hover,
+	&__item.active{
+		font-weight: bold;
+		color: $color-yellow;
+	}
+
+	&__content-item{display: none;}
+}
+
+// h1 + .tabs-page,
+// .h1 + .tabs-page{
+// 	margin-top: 55px;
+// }
+
+// @media (max-width: 991px) {
+// 	.tabs-page{
+// 		&__list{
+// 			flex-wrap: wrap;
+// 			margin-left: -15px;
+// 			margin-right: -15px;
+// 		}
+
+// 		&__item{
+// 			margin-bottom: 30px;
+// 		}
+
+// 		&__item:not(:last-child){
+// 			margin-right: 30px;
+// 		}
+
+// 		&__item.active::after{
+// 			bottom: -10px;
+// 		}
+// 	}
+
+// 	.tabs-page-vert{
+// 		&__list-wrap{
+// 			width: 200px;
+// 		}
+
+// 		&__content{
+// 			width: calc(100% - 200px);
+// 		}
+// 	}
+// }
+
+// @media (max-width: 767px) {
+// 	.tabs-page{
+// 		margin-bottom: 45px;
+		
+// 		&__list{
+// 			margin-bottom: 30px;
+// 		}
+// 	}
+
+// 	.tabs-page-vert{
+// 		display: block;
+
+// 		&__list-wrap{
+// 			flex-direction: row;
+// 			width: 100%;
+// 			padding-right: 0;
+// 		}
+
+// 		&__content{
+// 			width: 100%;
+// 		}
+// 	}
+// }

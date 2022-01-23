@@ -43,6 +43,7 @@ block content
 				h3 Заголовок - h3
 				h4 Заголовок - h4
 				h5 Заголовок - h5
+				h6 Заголовок - h6
 
 				br
 				p.h1 Это класс с названием h1
@@ -50,6 +51,27 @@ block content
 				p.h3 Это класс с названием h3
 				p.h4 Это класс с названием h4
 				p.h5 Это класс с названием h5
+				p.h6 Это класс с названием h6
+
+				br
+				br
+				br
+				div.h2 Списки
+				ul.list-dots
+					li Ненумерованный список
+					li Ненумерованный список
+					li Ненумерованный список
+					li Ненумерованный список
+					li Ненумерованный список
+					
+				br
+				br
+				ol
+					li Нумерованный список
+					li Нумерованный список
+					li Нумерованный список
+					li Нумерованный список
+					li Нумерованный список
 
 				br
 				br
@@ -86,7 +108,193 @@ block content
 					span Кнопка
 					+svg('ic-arr-right','ic-arr-right', '28', '20')
 
+				br
+				br
+				br
+				.h2 Нестандартный radio
+				.input-radio
+					input#radio1(type='radio' name='param1')
+					label.input-radio__label(for='radio1')
+						span.input-radio__mark
+						span.input-radio__text Текст
 
+				br
+				.input-radio.input-radio_blue
+					input#radio2(type='radio' name='param1')
+					label.input-radio__label(for='radio2')
+						span.input-radio__mark
+						span.input-radio__text Текст
+
+				br
+				br
+				br
+				.h2 Нестандартный checkbox
+				.input-check
+					input#check1(type='checkbox')
+					label.input-check__label(for='check1')
+						span.input-check__mark
+							+svg('ic-tick','ic-tick ic-stroke', '12', '8')
+						span.input-check__text Текст
+				br
+				.input-check.input-check_blue
+					input#check2(type='checkbox')
+					label.input-check__label(for='check2')
+						span.input-check__mark
+							+svg('ic-tick','ic-tick ic-stroke', '12', '8')
+						span.input-check__text Текст
+
+				br
+				br
+				br
+				.h2 Нестандартный select
+				.select
+					select.js-select
+						option(value="По популярности (убывание)") По популярности (убывание)
+						option(value="По популярности (возрастанию)") По популярности (возрастанию)
+						option(value="По цене (убывание)") По цене (убывание)
+						option(value="По цене (возрастанию)") По цене (возрастанию)
+						option(value="Наименованию") По наименованию
+
+				br
+				br
+				.select.select_blue
+					select.js-select
+						option(value="По популярности (убывание)") По популярности (убывание)
+						option(value="По популярности (возрастанию)") По популярности (возрастанию)
+						option(value="По цене (убывание)") По цене (убывание)
+						option(value="По цене (возрастанию)") По цене (возрастанию)
+						option(value="Наименованию") По наименованию
+
+
+				br
+				br
+				.h2 Табуляция
+				.h3 Горизонтальная табуляция
+				.tabs-page.js-tabs-page
+					ul.tabs-page__list.js-tabs-page-list
+						li.tabs-page__item.js-tabs-page-item(data-item='tab1') Tab1
+						li.tabs-page__item.js-tabs-page-item(data-item='tab2') Tab2
+						li.tabs-page__item.js-tabs-page-item(data-item='tab3') Tab3
+						li.tabs-page__item.js-tabs-page-item(data-item='tab4') Tab4
+					.tabs-page__content.js-tabs-page-content
+						#tab1.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+							| Первый контент
+						#tab2.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+							| Второй контент
+						#tab3.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+							| Третий контент
+						#tab4.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+							| Четвёртый контент
+
+				br
+				br
+				.h3 Вертикальная табуляция
+				.tabs-page-vert.js-tabs-page-vert
+					ul.tabs-page-vert__list.js-tabs-page-vert-list
+						li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert1') Tab1
+						li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert2') Tab2
+					.tabs-page-vert__content.js-tabs-page-vert-content
+						#tab-vert1.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item
+							| Первый контент
+						#tab-vert2.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item
+							| Второй контент
+				br
+				br
+				.h3 Смешанная табуляция
+				.tabs-page.tabs-page_mix.js-tabs-page
+					ul.tabs-page__list.js-tabs-page-list
+						li.tabs-page__item.js-tabs-page-item(data-item='tab1') Фиброцементный
+						li.tabs-page__item.js-tabs-page-item(data-item='tab2') Виниловый
+						li.tabs-page__item.js-tabs-page-item(data-item='tab3') Металлический
+						li.tabs-page__item.js-tabs-page-item(data-item='tab4') Акриловый
+
+					.tabs-page__content.js-tabs-page-content
+						#tab1.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+							.tabs-page-vert.js-tabs-page-vert
+								ul.tabs-page-vert__list.js-tabs-page-vert-list
+									li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert1') Ничиха
+									li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert2') Cedral
+									li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert3') Decover
+									
+								.tabs-page-vert__content.js-tabs-page-vert-content
+									#tab-vert1.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item
+										.material-card-list
+											-
+												var list=[
+													{img:'material-card1.jpg'},
+													{img:'material-card2.jpg'},
+													{img:'material-card3.jpg'},
+												]
+											each item in list
+												.material-card
+													.material-card__img
+														img(src="assets/img/"+item.img, alt="")
+
+													.material-card__title
+														a(href="#") Виниловый сайдинг Docke STANDART D5C Елочка (Пломбир)
+
+													.m-card-param
+														.m-card-param__item
+															.m-card-param__label Цвет
+															.m-card-param__val все цвета
+
+														.m-card-param__item
+															.m-card-param__label Длина
+															.m-card-param__val 1095 мм
+
+														.m-card-param__item
+															.m-card-param__label Ширина
+															.m-card-param__val 420 мм
+
+														.m-card-param__item
+															.m-card-param__label Полезная площадь панели
+															.m-card-param__val 0,46 м
+																sup 2
+
+													.material-card__price 320 руб/шт.
+
+										p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+									#tab-vert2.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Фиброцементный - Cedral
+									#tab-vert3.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Фиброцементный - Decover
+							// end tabs-page-vert
+						
+						#tab2.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+							.tabs-page-vert.js-tabs-page-vert
+								ul.tabs-page-vert__list.js-tabs-page-vert-list
+									li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert1') Ничиха
+									li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert2') Cedral
+								
+								.tabs-page-vert__content.js-tabs-page-vert-content
+									#tab-vert1.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Виниловыйm - Ничиха
+									#tab-vert2.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Виниловыйm - Cedral
+							// end tabs-page-vert
+						
+						#tab3.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+							.tabs-page-vert.js-tabs-page-vert
+								ul.tabs-page-vert__list.js-tabs-page-vert-list
+									li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert1') Ничиха
+									li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert2') Cedral
+									li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert3') Decover
+									
+								.tabs-page-vert__content.js-tabs-page-vert-content
+									#tab-vert1.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Металлический - Ничиха
+									#tab-vert2.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Металлический - Cedral
+									#tab-vert3.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Металлический - Decover
+							// end tabs-page-vert
+						
+						#tab4.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+							.tabs-page-vert.js-tabs-page-vert
+								ul.tabs-page-vert__list.js-tabs-page-vert-list
+									li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert1') Ничиха
+									li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert2') Cedral
+									li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert3') Decover
+									
+								.tabs-page-vert__content.js-tabs-page-vert-content
+									#tab-vert1.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Акриловый - Ничиха
+									#tab-vert2.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Акриловый - Cedral
+									#tab-vert3.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Акриловый - Decover
+							// end tabs-page-vert
+					
 				br
 				br
 				div.h2 Иконки
@@ -95,6 +303,16 @@ block content
 						.type-icon__img
 							+svg('ic-arr-right','ic-arr-right', '28', '20')
 						.type-icon__name ic-arr-right
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-arrow-left','ic-arrow-left', '10', '19')
+						.type-icon__name ic-arrow-left
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-arrow-right','ic-arrow-right', '10', '19')
+						.type-icon__name ic-arrow-right
 
 					.type-icon__item
 						.type-icon__img
@@ -108,6 +326,16 @@ block content
 
 					.type-icon__item
 						.type-icon__img
+							+svg('ic-mail','ic-mail', '19', '16')
+						.type-icon__name ic-mail
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-clock','ic-clock', '20', '20')
+						.type-icon__name ic-clock
+
+					.type-icon__item
+						.type-icon__img
 							+svg('ic-calc','ic-calc', '24', '24')
 						.type-icon__name ic-calc
 
@@ -115,6 +343,11 @@ block content
 						.type-icon__img
 							+svg('ic-person','ic-person ic-stroke', '20', '20')
 						.type-icon__name ic-person
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-person-fill','ic-person-fill', '20', '20')
+						.type-icon__name ic-person-fill
 
 					.type-icon__item
 						.type-icon__img
@@ -130,6 +363,16 @@ block content
 						.type-icon__img
 							+svg('ic-delivery','ic-delivery', '29', '18')
 						.type-icon__name ic-delivery
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-guarantee','ic-guarantee', '30', '30')
+						.type-icon__name ic-guarantee
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-house','ic-house', '30', '30')
+						.type-icon__name ic-house
 
 					.type-icon__item
 						.type-icon__img
@@ -153,5 +396,20 @@ block content
 
 					.type-icon__item
 						.type-icon__img
+							+svg('ic-tick','ic-tick ic-stroke', '20', '14')
+						.type-icon__name ic-tick
+
+					.type-icon__item
+						.type-icon__img
 							+svg('ic-tick-circle','ic-tick-circle', '30', '30')
 						.type-icon__name ic-tick-circle
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-link','ic-link ic-stroke', '35', '20')
+						.type-icon__name ic-link
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-order','ic-order', '17', '13')
+						.type-icon__name ic-order

@@ -1,0 +1,19 @@
+/*-------------- lists -----------------*/
+.list-dots{
+	li{
+		list-style: none;
+		padding-left: 25px;
+	}
+
+	li:before{
+		content: '';
+		display: inline-block;
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: $color-text;
+		margin-left: -15px;
+		margin-right: 12px;
+		margin-bottom: 4px;
+	}
+}

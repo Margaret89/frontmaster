@@ -1,0 +1,41 @@
+/*-------------- steps -----------------*/
+.steps-wrap{margin: 84px 0;}
+
+.steps{
+	background: $color-blue;
+	color: #fff;
+	padding: 15px 0 48px;
+
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -17px;
+		margin-right: -17px;
+	}
+
+	&__item{
+		width: calc(20% - 34px);
+		margin: 17px;
+		text-align: center;
+	}
+
+	&__num{
+		@include font(normal, 900, 9.6rem, 1, #1f3b85);
+		margin-bottom: -25px;
+	}
+
+	&__title{
+		@include font(normal, 900, 1.8rem, 1.15, #fff);
+		text-transform: uppercase;
+	}
+
+	&__text{
+		@include font(normal, normal, 1.8rem, 1.15, #fff);
+		margin-top: 10px;
+	}
+
+	.btn{
+		width: 100%;
+		margin-top: 50px;
+	}
+}

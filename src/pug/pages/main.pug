@@ -1,0 +1,671 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Монтаж сайдинга под ключ';
+	- var h1 = 'Монтаж сайдинга под ключ';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Пневмопистолет'},
+			{href:'#',name:'Видеонаблюдение'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.promo-block
+		.promo-block__content
+			.promo-block__info
+				.promo-block__text Только до 31.10.2021 при покупке материала и заказе внешней отделки дома “под ключ”
+				.promo-block__title Сайдинг - в подарок*
+				.promo-block__label *Акция действительна при заказе отделки фасада площадью от 100 м
+					sup 2
+
+			.form-site-wrap.js-valid-form
+				form.form-site
+					.form-site__title Оставьте заявку
+					
+					.form-site__content
+						.form-site__item.js-form-site-item
+							.form-site__field
+								input(type="text", required="required", placeholder="Имя*")
+
+						.form-site__item.js-form-site-item
+							.form-site__field
+								input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+					.form-site__btn
+						input(type="submit", value="Заказать монтаж").btn.js-btn-submit
+
+					.form-site__note Нажимая на кнопку "Заказать монтаж", вы соглашаетесь с правилами обработки данных
+
+		.btn-action
+			a(href="#").btn-action__item
+				+svg('ic-person','ic-person ic-stroke', '42', '42')
+			a(href="#").btn-action__item
+				+svg('ic-calc','ic-calc', '42', '42')
+			a(href="#").btn-action__item
+				+svg('ic-building','ic-building', '42', '42')
+
+	section.advant-wrap
+		.container
+			.advant
+				.advant__item
+					.advant__icon
+						+svg('ic-person-fill','ic-person-fill', '52', '52')
+					.advant__text
+						|Мастера
+						br
+						|славяне
+
+				.advant__item
+					.advant__icon
+						img(src="assets/img/ic-return.png", alt="")
+					.advant__text
+						|Возврат товара
+						br
+						|100 дней
+
+				.advant__item
+					.advant__icon
+						img(src="assets/img/ic-setting.png", alt="")
+					.advant__text
+						|Профессиональное
+						br
+						|оборудование
+
+				.advant__item
+					.advant__icon
+						+svg('ic-guarantee','ic-guarantee', '50', '50')
+					.advant__text
+						|Более 500
+						br
+						|выполненых работ
+
+				.advant__item
+					.advant__icon
+						+svg('ic-house','ic-house', '50', '50')
+					.advant__text
+						|Не требуют
+						br
+						|проживание
+				
+	section.about
+		.container
+			h2 Уникальный подход к работе
+
+			.about__content
+				.about__info
+					p В нашем ассортименте представлены современные фасадные и кровельные материалы от ведущих зарубежных и отечественных производителей. Также вы можете заказать у нас утеплители и изоляцию, стройматериалы для ландшафта, заборов и ограждений с доставкой по Московской области.
+
+					h6 Кровельные материалы
+					p На нашем сайте вы найдете широкий ассортимент материалов и комплектующих для кровли. В интернет-магазине ФРОНТМАСТЕР вы можете купить кровельные материалы по выгодным ценам, а наши консультанты помогут вам определится с выбором и рассчитать количество материала для заказа.
+
+					h6 Фасадные панели и сайдинг
+					p Компания ФРОНТМАСТЕР осуществляет продажу фасадных материалов, а также проводит все виды отделочных работ. В нашем интернет-магазине вы можете купить сайдинг, фасадные панели и планкен для наружной отделки дома. Наши специалисты помогут с расчетом материала, выполнят замеры, с помощью визуализации перенесут выбранные вами материалы на фото вашего дома, организуют доставку и монтаж.
+
+				.about__img
+					img(src="assets/img/house.jpg", alt="")
+				
+	section.material
+		.container
+			h2 Отдельные материалы от прямых поставщиков и производителей
+
+			.tabs-page.tabs-page_mix.js-tabs-page
+				ul.tabs-page__list.js-tabs-page-list
+					li.tabs-page__item.js-tabs-page-item(data-item='tab1') Фиброцементный
+					li.tabs-page__item.js-tabs-page-item(data-item='tab2') Виниловый
+					li.tabs-page__item.js-tabs-page-item(data-item='tab3') Металлический
+					li.tabs-page__item.js-tabs-page-item(data-item='tab4') Акриловый
+
+				.tabs-page__content.js-tabs-page-content
+					#tab1.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+						.tabs-page-vert.js-tabs-page-vert
+							ul.tabs-page-vert__list.js-tabs-page-vert-list
+								li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert1') Ничиха
+								li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert2') Cedral
+								li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert3') Decover
+								
+							.tabs-page-vert__content.js-tabs-page-vert-content
+								#tab-vert1.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item
+									.material-card-list
+										-
+											var list=[
+												{img:'material-card1.jpg'},
+												{img:'material-card2.jpg'},
+												{img:'material-card3.jpg'},
+											]
+										each item in list
+											.material-card
+												.material-card__img
+													img(src="assets/img/"+item.img, alt="")
+
+												.material-card__title
+													a(href="#") Виниловый сайдинг Docke STANDART D5C Елочка (Пломбир)
+
+												.m-card-param
+													.m-card-param__item
+														.m-card-param__label Цвет
+														.m-card-param__val все цвета
+
+													.m-card-param__item
+														.m-card-param__label Длина
+														.m-card-param__val 1095 мм
+
+													.m-card-param__item
+														.m-card-param__label Ширина
+														.m-card-param__val 420 мм
+
+													.m-card-param__item
+														.m-card-param__label Полезная площадь панели
+														.m-card-param__val 0,46 м
+															sup 2
+
+												.material-card__price 320 руб/шт.
+
+									p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+								#tab-vert2.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Фиброцементный - Cedral
+								#tab-vert3.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Фиброцементный - Decover
+						// end tabs-page-vert
+					
+					#tab2.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+						.tabs-page-vert.js-tabs-page-vert
+							ul.tabs-page-vert__list.js-tabs-page-vert-list
+								li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert1') Ничиха
+								li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert2') Cedral
+							
+							.tabs-page-vert__content.js-tabs-page-vert-content
+								#tab-vert1.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Виниловыйm - Ничиха
+								#tab-vert2.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Виниловыйm - Cedral
+						// end tabs-page-vert
+					
+					#tab3.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+						.tabs-page-vert.js-tabs-page-vert
+							ul.tabs-page-vert__list.js-tabs-page-vert-list
+								li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert1') Ничиха
+								li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert2') Cedral
+								li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert3') Decover
+								
+							.tabs-page-vert__content.js-tabs-page-vert-content
+								#tab-vert1.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Металлический - Ничиха
+								#tab-vert2.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Металлический - Cedral
+								#tab-vert3.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Металлический - Decover
+						// end tabs-page-vert
+					
+					#tab4.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+						.tabs-page-vert.js-tabs-page-vert
+							ul.tabs-page-vert__list.js-tabs-page-vert-list
+								li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert1') Ничиха
+								li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert2') Cedral
+								li.tabs-page-vert__item.js-tabs-page-vert-item(data-item='tab-vert3') Decover
+								
+							.tabs-page-vert__content.js-tabs-page-vert-content
+								#tab-vert1.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Акриловый - Ничиха
+								#tab-vert2.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Акриловый - Cedral
+								#tab-vert3.tabs-page-vert__content-item.js-tabs-page-vert-content-item.js-tabs-page-vert-content-item Акриловый - Decover
+						// end tabs-page-vert
+
+	section.type-card-wrap
+		.container
+			h2 Сделаем ваш дом в любом стиле
+
+			.type-card
+				-
+					var list=[
+						{img:'house1.jpg', title:'Фахверк', text:'Классические немецкие дома в стиле фахверк – это, как правило, короб с высокой двускатной черепичной крышей'},
+						{img:'house2.jpg', title:'Американский', text:'Основные его преимущества – минимализм, максимальная практичность и технологичность интерьера'},
+						{img:'house3.jpg', title:'Хай-тек', text:'Основные его преимущества – минимализм, максимальная практичность и технологичность интерьера'},
+					]
+				each item in list
+					a(href="#").type-card__item
+						.type-card__img(style="background-image: url(assets/img/"+item.img+")")
+
+						.type-card__content
+							.type-card__title= item.title
+							.type-card__text= item.text
+							.type-card__more
+								+svg('ic-link','ic-link ic-stroke', '35', '20')
+
+	section.worker
+		.container
+			h2 Все наши бригады прошли обучение от производителя и используют специализированные инструменты
+
+			.worker__content
+				.worker__list
+					.worker__item Пила для сайдинга
+					.worker__item Пневмопистаолет
+					.worker__item Промышленный пистолет
+					.worker__item Видеонаблюдение
+
+				.worker__img
+					img(src='assets/img/worker-img.jpg' alt='')
+
+				.worker__info
+					p Все бригады прошли обучение от производителя и получили сертификаты, подтверждающие высокий уровень выполняемых работ. А полученный опыт за годы практики позволит произвести качественных монтаж достойный вашего дома. На выполненные работы действует полная гарантия в 2 года!
+					a.btn(href='#') Смонтируем с гарантией 2 года!
+
+	section.portfolio-wrap
+		.container
+			h2 Наши работы
+
+			.portfolio
+				.portfolio__item
+					a(href='assets/img/portfolio1.jpg', data-fancybox='portfolio').portfolio__img(style="background-image: url(assets/img/portfolio1.jpg)")
+					
+				.portfolio__item
+					a(href='assets/img/portfolio2.jpg', data-fancybox='portfolio').portfolio__img(style="background-image: url(assets/img/portfolio2.jpg)")
+
+				.portfolio__item
+					a(href='assets/img/portfolio1.jpg', data-fancybox='portfolio').portfolio__img(style="background-image: url(assets/img/portfolio1.jpg)")
+
+				.portfolio__item
+					a(href='assets/img/portfolio2.jpg', data-fancybox='portfolio').portfolio__img(style="background-image: url(assets/img/portfolio2.jpg)")
+
+				.portfolio__item
+					a(href='assets/img/portfolio1.jpg', data-fancybox='portfolio').portfolio__img(style="background-image: url(assets/img/portfolio1.jpg)")
+
+				.portfolio__item
+					.portfolio-info
+						.portfolio-info__content
+							.portfolio-info__item
+								.portfolio-info__label Адрес:
+								.portfolio-info__text
+									b Одинцовский р-он, д.&nbsp;Марьтьяново
+
+							.portfolio-info__item
+								.portfolio-info__label Цена:
+								.portfolio-info__text 1 732 000 руб.
+
+							a.btn(href='#') Хочу так же!
+
+	section.steps-wrap
+		.container
+			h2 Этапы работ
+
+		.steps
+			.container
+				.steps__list
+					-
+						var list=[
+							{num:'01', title:'Идея', text:'Подберем для вас материалы по вашему вкусу, поможем сэкономить и сделаем расчет'},
+							{num:'02', title:'Замер', text:'Определим возможность монтажа выбранных материалов на ваш дом сделаем замер и фото дома для дизайна и сметы', btn:'true'},
+							{num:'03', title:'Визуализация', text:'Покажем как будут смотреться выбранные материалы на вашем доме'},
+							{num:'04', title:'Оплата', text:'Предоставим смету с возможностью оплаты в кредит или рассрочку'},
+							{num:'05', title:'Монтаж', text:'Сделаем качественный монтаж с гарантией 2 года и осуществим доставку до объекта'},
+						]
+					each item in list
+						.steps__item
+							.steps__num= item.num
+							.steps__title= item.title
+							.steps__text= item.text
+
+							if(item.btn)
+								a.btn(href='#') Записаться на замер
+
+	section.offer-card-wrap
+		.container
+			h2 Сделаем всё что нужно
+			
+			.offer-card-list
+				-
+					var list=[
+						{
+							title:'Установка утепления стен/кровли',
+							ul:[
+								'Любая толщина утеплителя',
+								'гидроизоляция'
+							]
+						},
+						{
+							title:'Монтаж мансардных окон',
+							ul:[
+								'Окна от производителя',
+								'Дополнительное освещение'
+							]
+						},
+						{
+							title:'Установка утепления стен/кровли',
+							ul:[
+								'Любая толщина утеплителя',
+								'гидроизоляция'
+							]
+						},
+						{
+							title:'Установка утепления стен/кровли',
+							ul:[
+								'Любая толщина утеплителя',
+								'гидроизоляция'
+							]
+						},
+					]
+				each item in list
+					.offer-card
+						.offer-card__content
+							.offer-card__title= item.title
+
+							.offer-card__text
+								ul.list-dots
+									each li in item.ul
+										li= li
+					
+						a.btn.btn_blue(href='#') Подробнее
+	
+	section.compare-advant-wrap
+		.container
+			h2 Ваши гарантии - наш принцип
+
+		.compare-advant-list
+			.compare-advant
+				.compare-advant__title Фронтмастер
+
+				.compare-advant__list
+					-
+						var list=[
+							{img:'ic-10-years.png', text:'более 10 лет на рынке'},
+							{img:'ic-doc.png', text:'работа по договору'},
+							{img:'ic-result.png', text:'более 500 выполненных объектов'},
+							{img:'ic-cash.png', text:'возврат до 100 дней'},
+							{img:'ic-man.png', text:'личный менеджер'},
+						]
+					each item in list
+						.compare-advant__item
+							.compare-advant__icon
+								img(src="assets/img/"+item.img, alt="")
+
+							.compare-advant__text= item.text
+
+			.compare-advant.compare-advant_yellow
+				.compare-advant__title Вольные рабочие
+
+				.compare-advant__list
+					-
+						var list=[
+							{img:'ic-think.png', text:'недавно начали работать'},
+							{img:'ic-msg.png', text:'устные договорённости'},
+							{img:'ic-people.png', text:'набивают руку на вашем объекте'},
+							{img:'ic-bin.png', text:'остатки будут просто валяться'},
+							{img:'ic-exit.png', text:'в любой момент могут пропасть'},
+						]
+					each item in list
+						.compare-advant__item
+							.compare-advant__icon
+								img(src="assets/img/"+item.img, alt="")
+
+							.compare-advant__text= item.text
+					
+	section.visual-wrap
+		.container
+			h2 Вы всегда сможете понять как будет выглядеть ваш дом благодаря нашей разработке - Визуализация
+
+			.visual
+				.visual__item
+					img(src='assets/img/visual1.jpg' alt='')
+
+				.visual__item
+					img(src='assets/img/visual2.jpg' alt='')
+
+				.form-site-wrap.js-valid-form
+					form.form-site
+						.form-site__title Оставьте заявку
+						
+						.form-site__content
+							.form-site__item.js-form-site-item
+								.form-site__field
+									input(type="text", required="required", placeholder="Имя*")
+
+							.form-site__item.js-form-site-item
+								.form-site__field
+									input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+						.form-site__btn
+							input(type="submit", value="Получить визуализацию").btn.js-btn-submit
+
+						.form-site__note Нажимая на кнопку "Получить визуализацию", вы соглашаетесь с правилами обработки данных
+
+			.price-list-wrap
+				h2 Прайс-лист
+
+				.price-list-wrap__content
+					.price-list
+						-
+							var list=[
+								{label:'Материал*', price:'1 343 рублей'},
+								{label:'Работы по монтажу обрешеток', price:'250 рублей'},
+								{label:'Монтаж утеплителя', price:'380 рублей'},
+								{label:'Устройство гидро-пароизоляции', price:'170 рублей'},
+								{label:'Монтаж кудрала', price:'1 600 рублей'},
+								{label:'Подшив свесов кровли', text:'Рассчитывается индивидуально'},
+								{label:'Доставка материала и строительных лесов', text:'Рассчитывается индивидуально'},
+								{label:'Монтаж стеклопакетов', price:'1 430 рублей'},
+								{label:'Материал*', price:'1 343 рублей'},
+								{label:'Работы по монтажу обрешеток', price:'250 рублей'},
+								{label:'Монтаж утеплителя', price:'380 рублей'},
+								{label:'Устройство гидро-пароизоляции', price:'170 рублей'},
+								{label:'Монтаж кудрала', price:'1 600 рублей'},
+								{label:'Подшив свесов кровли', text:'Рассчитывается индивидуально'},
+								{label:'Доставка материала и строительных лесов', text:'Рассчитывается индивидуально'},
+								{label:'Монтаж стеклопакетов', price:'1 430 рублей'},
+								{label:'Материал*', price:'1 343 рублей'},
+								{label:'Работы по монтажу обрешеток', price:'250 рублей'},
+								{label:'Монтаж утеплителя', price:'380 рублей'},
+								{label:'Устройство гидро-пароизоляции', price:'170 рублей'},
+								{label:'Монтаж кудрала', price:'1 600 рублей'},
+								{label:'Подшив свесов кровли', text:'Рассчитывается индивидуально'},
+								{label:'Доставка материала и строительных лесов', text:'Рассчитывается индивидуально'},
+								{label:'Монтаж стеклопакетов', price:'1 430 рублей'},
+							]
+						each item in list
+							.price-list__item
+								.price-list__label= item.label
+								.price-list__val
+									if(item.price)
+										|От 
+										b= item.price 
+										| 
+										| за 1 кв. м.
+									
+									if(item.text)
+										=item.text
+
+					.form-calc-wrap.js-valid-form
+						form.form-calc
+							.form-calc__title Расчет стоимости монтажа
+							
+							.form-calc__content
+								.form-calc__item-wrap
+									.form-calc__item.form-calc__item_short.js-form-site-item
+										.form-calc__label Укажите площадь:
+
+										.form-calc__field
+											input(type="text", required="required", value="100")
+											.form-calc__note кв.м
+
+									.form-calc__item.js-form-site-item
+										.form-calc__label Выберите вид материала:
+
+										.form-calc__field
+											.select.select_blue
+												select.js-select
+													option(value="Индивидуальный дизайн") Индивидуальный дизайн
+													option(value="Параметр 2") Параметр 2
+													option(value="Параметр 3") Параметр 3
+													option(value="Параметр 4") Параметр 4
+													option(value="Параметр 5") Параметр 5
+
+								.form-calc__item.js-form-site-item
+									.input-check.input-check_blue
+										input#warm(type='checkbox')
+										label.input-check__label(for='warm')
+											span.input-check__mark
+												+svg('ic-tick','ic-tick', '15', '15')
+											span.input-check__text Нужно утепление
+
+								.form-calc__item.js-form-site-item
+									.form-calc__label Ваш тип здания:
+
+									.form-calc__field
+										.select.select_blue
+											select.js-select
+												option(value="Загородный дом") Загородный дом
+												option(value="Параметр 2") Параметр 2
+												option(value="Параметр 3") Параметр 3
+												option(value="Параметр 4") Параметр 4
+												option(value="Параметр 5") Параметр 5
+
+							.form-calc-price
+								.form-calc-price__label Стоимость:
+								.form-calc-price__num От 32 000 рублей
+								.form-calc-price__text В кредит от 4 446 рублей в месяц
+
+							.form-calc__btn
+								input(type="submit", value="Получить визуализацию").btn.btn_blue.js-btn-submit
+
+	section.our-team-wrap
+		.container
+			h2 Наши специалисты
+
+			.our-team
+				-
+					var list=[
+						{img:'man.jpg'},
+						{img:'man.jpg'},
+						{img:'man.jpg'},
+						{img:'man.jpg'},
+					]
+				each item in list
+					.our-team__item
+						.our-team__icon(style="background-image: url(assets/img/"+item.img+")")
+						.our-team__title Супер Крутой Спец
+						.our-team__post Архитектор
+						.our-team__text Опыт работы 20 лет
+				
+	section.objects
+		.container
+			h2 Наши объекты
+			
+			.objects__content
+				.objects__info
+					.sort
+						.sort__label Сортировать:
+						.sort__item
+							|А-Я
+							+svg('ic-order','ic-order', '17', '13')
+
+						.sort__item
+							|1-9
+							+svg('ic-order','ic-order', '17', '13')
+
+					.objects-list
+						-
+							var list=[
+								{num:'12', text:'Фиброцементный сайдинг'},
+								{num:'12', text:'Виниловый сайдинг'},
+								{num:'12', text:'Кровля'},
+							]
+						each item in list
+							.objects-list__item
+								.objects-list__num= item.num
+								.objects-list__text= item.text
+						
+				.objects__map
+					iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3A75ce60abec8d8cfcccd2eba31662b6875a3bb3a6e952fe7df0a543a041ef0642&source=constructor' width='100%' height='760' frameborder='0')
+
+	section.review-slider-wrap
+		.container
+			h2 Довольные клиенты
+
+			.review-slider.js-review-slider
+				-
+					var list=[
+						{img:'woman.jpg', name:'Ирина Игнатьева,', age:'38 лет', text:'Большое спасибо компании "Фронтмастер" за качественные услуги по отделке дома. Отдельная благодарность бригаде монтажников Войтовых: Евгению и Михаилу. Ребята добросовестные, аккуратные. Работают слаженно, быстро и качественно, слаженно, быстро и качественно'},
+						{img:'woman.jpg', name:'Мария Конова,', age:'24 лет', text:'Большое спасибо компании "Фронтмастер".'},
+						{img:'woman.jpg', name:'Катерина Сорокина,', age:'18 лет', text:'Большое спасибо компании "Фронтмастер" за качественные услуги по отделке дома. Отдельная благодарность бригаде монтажников Войтовых: Евгению и Михаилу. Ребята добросовестные, аккуратные. Работают слаженно, быстро и качественно, слаженно, быстро и качественно'},
+						{img:'woman.jpg', name:'Елена Иванова,', age:'22 лет', text:'Большое спасибо компании "Фронтмастер" за качественные услуги по отделке дома. Отдельная благодарность бригаде монтажников Войтовых: Евгению и Михаилу. Ребята добросовестные, аккуратные. Работают слаженно, быстро и качественно, слаженно, быстро и качественно'},
+					]
+				each item in list
+					.review-slider__item
+						.review-slider__photo(style="background-image: url(assets/img/"+item.img+")")
+
+						.review-slider__content
+							.review-slider__name= item.name
+							.review-slider__age= item.age
+							.review-slider__text.js-short-text(data-count="225")= item.text
+
+							.review-slider__btn
+								a.btn.btn_shadow(href='#') Хочу также!
+								a.btn.btn_border.btn_shadow(href='#')
+									span Смотреть объект
+									+svg('ic-arr-right','ic-arr-right', '28', '20')
+
+			.review-slider-wrap__nav
+				.slider-nav.js-review-slider-nav
+
+	section.review-soc-wrap
+		.container
+			.review-soc
+				-
+					var list=[
+						{img:'yell.png'},
+						{img:'ya.png'},
+						{img:'like.png'},
+					]
+				each item in list
+					.review-soc__item
+						.review-soc__img
+							img(src="assets/img/"+item.img, alt="")
+
+						a.btn.btn_shadow(href='#') Читать отзывы
+
+
+	section.contacts
+		.container
+			.contacts__content
+				.contacts__map
+					iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3A3368c4f61def4c56ccfda782109f9f436e8cb3b4420252f054b9cb6aabab3a68&source=constructor' width='100%' height='535' frameborder='0')
+
+				.contacts__info
+					.contacts__title Контакты
+
+					.contacts-item
+						.contacts-item__top
+							span.contacts-item__icon
+								+svg('ic-map','ic-map', '15', '20')
+							span.contacts-item__title Адрес
+
+						.contacts-item__text Ул. Балтийская, д. 5, Центр Культуры и Бизнеса “Москва-Сокол”, г. Москва, 125190
+
+					.contacts-item
+						.contacts-item__top
+							span.contacts-item__icon
+								+svg('ic-phone','ic-phone', '18', '18')
+							span.contacts-item__title Телефон:
+
+						.contacts-item__text
+							| +7 (499) 653-70-50 доб.19
+							br
+							| +7 (926) 653-71-41
+
+							a.btn(data-fancybox='' data-src='#feadback' href='javascript:;')
+								+svg('ic-phone','ic-phone', '18', '18')
+								span Заказать звонок
+
+					.contacts-item
+						.contacts-item__top
+							span.contacts-item__icon
+								+svg('ic-mail','ic-mail', '19', '16')
+							span.contacts-item__title Электронная почта:
+
+						.contacts-item__text msk@frontmaster.ru
+
+					.contacts-item
+						.contacts-item__top
+							span.contacts-item__icon
+								+svg('ic-clock','ic-clock', '20', '20')
+							span.contacts-item__title Режим работы:
+
+						.contacts-item__text
+							| Пн-пт: 10:00-19:00 
+							br
+							| Сб-вс: выходной

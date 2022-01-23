@@ -1,0 +1,17 @@
+/*-------------- review-soc -----------------*/
+.review-soc-wrap{margin: 40px 0;}
+
+.review-soc{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1380px;
+	margin: 0 auto;
+
+	&__item{
+		width: calc(33.33% - 30px);
+		text-align: center;
+		margin: 15px;
+	}
+
+	.btn{margin-top: 30px;}
+}

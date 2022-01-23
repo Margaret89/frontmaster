@@ -1,0 +1,63 @@
+/*-------------- compare-advant -----------------*/
+.compare-advant-wrap{
+	margin: 48px 0;
+
+	h2, .h2{margin-bottom: 1.5rem;}
+}
+
+.offer-card-wrap + .compare-advant-wrap{margin-top: -70px;}
+
+.compare-advant-list{
+	display: flex;
+	justify-content: space-between;
+}
+
+.compare-advant{
+	width: calc(50% - 10px);
+	background: $color-blue url(../img/bg-compare.png) no-repeat top left;
+	padding: 75px 25px 65px;
+	color: #fff;
+
+	&__title{
+		@include font(normal, 900, 3.6rem, 1.2, #fff);
+		text-align: center;
+		margin-bottom: 82px;
+	}
+
+	&__list{
+		width: 420px;
+		margin: 0 auto;
+	}
+
+	&__item{
+		display: flex;
+		align-items: center;
+	}
+
+	&__item:not(:last-child){margin-bottom: 46px;}
+
+	&__icon{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 52px;
+		height: 52px;
+		border-radius: 50%;
+		background: $color-yellow;
+		padding: 3px;
+		margin-right: 25px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	&__text{
+		@include font(normal, bold, 1.8rem, 1.15, #fff);
+	}
+
+	&_yellow{
+		background-color: $color-yellow;
+		background-position: top right;
+	}
+
+	&_yellow &__icon{background: $color-blue;}
+}

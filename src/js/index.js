@@ -88,3 +88,88 @@ if($('.js-valid-form').length){
 		e.preventDefault();
 	});
 }
+
+// Табуляция
+if ($('.js-tabs-page').length) {
+	$('.js-tabs-page-list').each(function(){
+		$(this).find('.js-tabs-page-item:first').addClass("active");
+	});
+
+	$('.js-tabs-page-content').each(function(){
+		$(this).find('.js-tabs-page-content-item:first').fadeIn();
+	});
+
+	$('.js-tabs-page-item').on('click', function(e) {
+		e.preventDefault();
+		var $parent = $(this).parents('.js-tabs-page');
+
+		$parent.find('.js-tabs-page-content-item').hide();
+		$parent.find('.js-tabs-page-item').removeClass('active');
+
+		$(this).addClass("active");
+		$parent.find('#' + $(this).attr('data-item')).fadeIn();
+	});
+}
+
+// Вертикальная табуляция
+if ($('.js-tabs-page-vert').length) {
+	$('.js-tabs-page-vert-list').each(function(){
+		$(this).find('.js-tabs-page-vert-item:first').addClass("active");
+	});
+
+	$('.js-tabs-page-vert-content').each(function(){
+		$(this).find('.js-tabs-page-vert-content-item:first').fadeIn();
+	});
+
+	$('.js-tabs-page-vert-item').on('click', function(e) {
+		e.preventDefault();
+		var $parent = $(this).parents('.js-tabs-page-vert');
+
+		$parent.find('.js-tabs-page-vert-content-item').hide();
+		$parent.find('.js-tabs-page-vert-item').removeClass('active');
+
+		$(this).addClass("active");
+		$parent.find('#' + $(this).attr('data-item')).fadeIn();
+	});
+}
+
+// Оформление нестандартного селекта
+if($('.js-select').length){
+	$('.js-select').select2({
+		minimumResultsForSearch: -1,
+	});
+}
+
+// Обрезание многострочного текста по количеству символов
+if ($('.js-short-text').length) {
+	var arrShortText = [];
+
+	$('.js-short-text').each(function(index){
+		arrShortText[index]=$(this).text();
+	});
+
+	function sliceText(){
+		$('.js-short-text').each(function( index ) {
+			var newsText = arrShortText[index];
+			
+			var size = $(this).data('count');
+
+			if(newsText.length > size){
+				$(this).html(newsText.slice(0, size) + ' ...');
+			}
+		});
+	}
+	
+	sliceText();
+}
+
+// Слайдер отзывов
+if($('.js-review-slider').length){
+	$('.js-review-slider').slick({
+		dots: true,
+		appendArrows: $('.js-review-slider-nav'),
+		appendDots: $('.js-review-slider-nav'),
+		prevArrow: '<button id="prev" type="button" class="slider-nav__arr slider-nav__arr_left"><svg class="icon ic-arrow-left" width="10" height="19"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
+		nextArrow: '<button id="next" type="button" class="slider-nav__arr slider-nav__arr_right"><svg class="icon ic-arrow-right" width="10" height="19"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
+	});
+}

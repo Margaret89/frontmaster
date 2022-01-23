@@ -1,6 +1,3 @@
-// fancybox
-@import '~@fancyapps/fancybox/dist/jquery.fancybox.css';
-
 @import "utils/vars";
 
 // Наш сайт
@@ -12,6 +9,14 @@
 @import "layouts/*";
 @import "components/*";
 
+// fancybox
+@import '~@fancyapps/fancybox/dist/jquery.fancybox.css';
+
+// select2
+@import '~select2/dist/css/select2.min.css';
+
+// slick
+@import '~slick-slider/slick/slick.css';
 
 
 
