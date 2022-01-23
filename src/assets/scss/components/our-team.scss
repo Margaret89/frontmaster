@@ -21,7 +21,7 @@
 	}
 
 	&__icon{
-		display: inline-flex;
+		display: flex;
 		align-items: center;
 		justify-content: center;
 		width: 220px;
@@ -30,7 +30,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
-		margin-bottom: 38px;
+		margin: 0 auto 38px;
 	}
 
 	&__title{
@@ -45,5 +45,34 @@
 	&__text{
 		@include font(normal, normal, 1.6rem, 1.15, #fff);
 		margin-top: 18px;
+	}
+}
+
+@media (max-width: 767px) {
+	.our-team-wrap{
+		margin: 44px 0;
+		padding: 40px 0;
+	}
+
+	.our-team{
+		&__item{
+			width: calc(50% - 40px);
+			margin: 10px 20px;
+		}
+
+		&__icon{
+			width: 94px;
+			height: 94px;
+			margin-bottom: 12px;
+		}
+
+		&__title{font-size: 1.4rem;}
+
+		&__post,
+		&__text{
+			font-size: 1.2rem;
+		}
+
+		&__text{margin-top: 10px;}
 	}
 }

@@ -82,3 +82,33 @@
 		@include font(normal, bold, 1.6rem, 1.15, $color-text);
 	}
 }
+
+@media (max-width: 1279px) {
+	.objects{
+		&__info{margin-right: 30px;}
+	}
+}
+
+@media (max-width: 991px) {
+	.objects{
+		&__content{display: block;}
+
+		&__info{
+			width: auto;
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+
+		&__map iframe{height: 500px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.objects{
+		margin: 44px 0;
+
+		h1, .h2{margin-bottom: 2rem;}
+		&__info{margin-bottom: 10px;}
+		&__map iframe{height: 304px;}
+	}
+}

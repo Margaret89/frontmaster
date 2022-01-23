@@ -1,5 +1,8 @@
 /*-------------- select -----------------*/
-.select2{width: auto!important;}
+.select2{
+	width: auto!important;
+	max-width: 100%!important;
+}
 
 .select2-container .select2-selection--single{
 	height: 5.4rem;

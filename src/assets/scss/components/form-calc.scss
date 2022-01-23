@@ -91,9 +91,13 @@
 	&__item-wrap{
 		display: flex;
 		justify-content: space-between;
-
-		.select2{width: 254px!important;}
 	}
+
+	&__item-wrap &__item{
+		width: 100%;
+		max-width: calc(100% - 170px);
+	}
+	&__item-wrap &__item_short{width: auto;}
 
 	&__item_short &__field{
 		display: flex;
@@ -101,6 +105,9 @@
 	}
 
 	&__item_short{
+		flex-shrink: 0;
+		margin-right: 20px;
+
 		input[type="text"],
 		input[type="email"],
 		input[type="number"],
@@ -154,5 +161,13 @@
 		@include font(normal, normal, 1.6rem, 1.15, $color-text);
 		opacity: 0.6;
 		margin-top: 4px;
+	}
+}
+
+@media (max-width: 767px) {
+	.form-calc{
+		padding: 20px;
+		&__title{font-size: 2.4rem;}
+		&__label{font-size: 1.4rem;}
 	}
 }

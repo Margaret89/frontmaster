@@ -1,15 +1,33 @@
-header.header
-	span.ic-hamburger.js-open-menu
+header.header.js-header
+	span.ic-hamburger.js-open-menu.d-lg-none
 		span
 
 	.header__logo-wrap
 		a.header__logo(href='/')
 			img(src='assets/img/logo.svg' alt='')
-		.header__phone
+		.header__phone.d-lg-none
 			a(href="tel:+74950010056")  +7 (495) 001-00-56
 
-	nav.main-menu
-		ul.main-menu__list
+	nav.main-menu-wrap.js-main-menu-wrap
+		.main-menu-wrap__close.js-close-menu.d-lg-none
+			span.ic-hamburger.active
+				span
+
+		.main-menu-wrap__logo.d-lg-none
+			a(href='/')
+				img(src='assets/img/logo.svg' alt='')
+
+		.mobile-links.d-lg-none
+			.mobile-links__item
+				a(href="#") Заказать замер
+
+			.mobile-links__item
+				a(href="#") Получить расчет
+
+			.mobile-links__item
+				a(href="#") Визуализация
+
+		ul.main-menu.js-main-menu
 			-
 				var list=[
 					{text:'Каталог', status:'active'},
@@ -23,15 +41,15 @@ header.header
 					{text:'Акции'},
 					{text:'Контакт'},
 				]
-			each item in list
-				li.main-menu__item(class=item.status?'active':'')
+			each item, index in list
+				li.main-menu__item.js-main-menu-item(class=item.status?'active':'', data-num=index)
 					a(href="#").main-menu__link= item.text
 						if(item.custom == '1')
 							|О&nbsp;монтаже
 						if(item.custom == '2')
 							|О&nbsp;компании
 	
-	.header__contacts
+	.header__contacts.d-none.d-lg-block
 		.header__phone
 			a(href='tel:+74950010056') +7 (495) 001-00-56
 		.header__callback

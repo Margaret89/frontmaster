@@ -39,3 +39,30 @@
 		margin-top: 50px;
 	}
 }
+
+@media (max-width: 1279px) {
+	.steps{
+		&__item{width: calc(33.33% - 34px);}
+	}
+}
+
+@media (max-width: 767px) {
+	.steps-wrap{margin: 44px 0;}
+
+	.steps{
+		&__list{
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		&__item{
+			width: 320px;
+			max-width: 100%;
+			margin: 15px auto;
+		}
+
+		.btn{margin-top: 30px;}
+	}
+
+	.steps-wrap + .offer-card-wrap{margin-top: -44px;}
+}

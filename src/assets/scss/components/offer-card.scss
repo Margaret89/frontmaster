@@ -43,3 +43,33 @@
 		margin-top: 33px;
 	}
 }
+
+@media (max-width: 1279px) {
+	.offer-card{width: calc(50% - 24px);}
+}
+
+@media (max-width: 767px) {
+	.offer-card-list{
+		margin-left: -7px;
+		margin-right: -7px;
+	}
+
+	.offer-card{
+		width: calc(50% - 14px);
+		margin: 7px;
+		padding: 12px 8px;
+
+		&__title{font-size: 1.4rem;}
+
+		&__text{
+			font-size: 1.3rem;
+			margin-top: 20px;
+		}
+
+		.btn{
+			height: 3.2rem;
+			font-size: 1.4rem;
+			margin-top: 10px;
+		}
+	}
+}

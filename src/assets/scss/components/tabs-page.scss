@@ -97,8 +97,6 @@
 		transition: color 0.2s ease 0s;
 	}
 
-	&__item:not(:last-child){margin-bottom: 36px;}
-
 	&__item:hover,
 	&__item.active{
 		font-weight: bold;
@@ -108,63 +106,81 @@
 	&__content-item{display: none;}
 }
 
-// h1 + .tabs-page,
-// .h1 + .tabs-page{
-// 	margin-top: 55px;
-// }
+@media (max-width: 1400px) {
+	.tabs-page-vert{
+		&__list{margin-right: 30px;}
+	}
+}
 
-// @media (max-width: 991px) {
-// 	.tabs-page{
-// 		&__list{
-// 			flex-wrap: wrap;
-// 			margin-left: -15px;
-// 			margin-right: -15px;
-// 		}
+@media (min-width: 1280px) {
+	.tabs-page-vert{
+		&__item:not(:last-child){margin-bottom: 36px;}
+	}
+}
 
-// 		&__item{
-// 			margin-bottom: 30px;
-// 		}
+@media (max-width: 1279px) {
+	.tabs-page-vert{
+		display: block;
 
-// 		&__item:not(:last-child){
-// 			margin-right: 30px;
-// 		}
+		&__list{
+			display: flex;
+			flex-wrap: wrap;
+			width: auto;
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
 
-// 		&__item.active::after{
-// 			bottom: -10px;
-// 		}
-// 	}
+		&__item{margin: 5px;}
+	}
 
-// 	.tabs-page-vert{
-// 		&__list-wrap{
-// 			width: 200px;
-// 		}
+	.tabs-page{
+		&_mix &__item:first-child{
+			width: 100%;
+			flex-shrink: 1;
+		}
 
-// 		&__content{
-// 			width: calc(100% - 200px);
-// 		}
-// 	}
-// }
+		&__content-item{padding: 20px 30px;}
 
-// @media (max-width: 767px) {
-// 	.tabs-page{
-// 		margin-bottom: 45px;
-		
-// 		&__list{
-// 			margin-bottom: 30px;
-// 		}
-// 	}
+		.tabs-page-vert{
+			margin-left: 0;
 
-// 	.tabs-page-vert{
-// 		display: block;
+			&__list{
+				margin-left: -57px;
+				margin-right: -57px;
+			}
+		}
+	}
+}
 
-// 		&__list-wrap{
-// 			flex-direction: row;
-// 			width: 100%;
-// 			padding-right: 0;
-// 		}
+@media (max-width: 767px) {
+	.tabs-page{
+		margin-left: 10px;
+		margin-right: 10px;
 
-// 		&__content{
-// 			width: 100%;
-// 		}
-// 	}
-// }
+		&__list{
+			display: block;
+			margin-left: -10px;
+			margin-right: -10px;
+			background: transparent;
+			padding: 0;
+		}
+
+		&__item{
+			padding: 10px 15px;
+			background: $color-blue;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			margin: 0 0 18px 0;
+		}
+
+		&__item:last-child{margin-bottom: 0;}
+
+		&__content-item{padding: 20px 15px;}
+
+		.tabs-page-vert{
+			&__list{
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}

@@ -9,6 +9,7 @@
 	border: 3px solid $color-yellow;
 	margin: 0 auto;
 	padding: 22px 50px;
+	position: relative;
 
 	&__title{
 		flex-shrink: 0;
@@ -29,5 +30,41 @@
 		line-height: 1;
 		flex-shrink: 0;
 		margin-left: 30px;
+	}
+}
+
+@media (max-width: 1279px) {
+	.offer-block{
+		width: auto;
+		margin-left: 35px;
+		margin-right: 35px;
+	}
+}
+
+@media (max-width: 991px) {
+	.offer-block{
+		display: block;
+		padding: 14px 34px;
+
+		&__title{
+			width: auto;
+			max-width: none;
+			margin-right: 0;
+			margin-bottom: 24px;
+		}
+
+		&__text{line-height: 1.9;}
+
+		.btn{
+			display: table;
+			margin: 30px auto 0;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.offer-block{
+		margin-left: 15px;
+		margin-right: 15px;
 	}
 }

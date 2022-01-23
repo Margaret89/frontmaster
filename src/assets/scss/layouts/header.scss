@@ -14,8 +14,6 @@
 		margin-right: 15px;
 	}
 
-	&__logo-wrap &__phone{display: none;}
-
 	&__contacts{
 		flex-shrink: 0;
 		margin-left: 15px;
@@ -58,5 +56,31 @@
 		}
 
 		a:hover{color: $color-yellow;}
+	}
+}
+
+@media (max-width: 991px) {
+	.header{
+		padding: 12px 15px;
+		border: none;
+		box-shadow: none;
+
+		.ic-hamburger{
+			flex-shrink: 0;
+			margin-right: 15px;
+		}
+
+		&__logo-wrap{
+			text-align: right;
+			margin-right: 0;
+			margin-left: 15px;
+		}
+
+		&__phone{
+			font-size: 1.8rem;
+			margin-top: 4px;
+		}
+
+		&__logo img{max-width: 178px;}
 	}
 }

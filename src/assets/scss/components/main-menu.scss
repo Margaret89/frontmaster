@@ -1,14 +1,18 @@
 /* main-menu */
 .main-menu{
-	&__list,
+	&,
 	&__item{
 		margin: 0;
 		padding: 0;
 		list-style: none;
 	}
 
-	&__list{display: flex;}
-	&__item{margin: 0 5px;}
+	&{display: flex;}
+
+	&__item{
+		margin: 0 5px;
+		position: relative;
+	}
 
 	&__link{
 		min-width: 80px;
@@ -47,5 +51,103 @@
 	&__link:hover::after,
 	&__item.active &__link::after{
 		width: 0;
+	}
+
+	&__sub-more{display: none;}
+
+	&__sub-more &__link{
+		display: block;
+		padding: 10px 15px;
+	}
+
+	&__sub-more &__link::after{display: none;}
+
+	&__sub-more &__item{
+		padding: 0;
+		margin: 0;
+	}
+
+	&__sub-item:not(:last-child),
+	&__sub-more &__item:not(:last-child){
+		border-bottom: 1px solid $color-blue;
+	}
+}
+
+@media (min-width: 992px) {
+	.main-menu{
+		&__item:hover &__sub-more{display: block;}
+
+		&__sub-more{
+			display: none;
+			width: 222px;
+			border: 1px solid $color-blue;
+			background: #fff;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			z-index: 100;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.main-menu-wrap{
+		width: 100vw;
+		height: 100vh;
+		background: #fff;
+		padding: 55px 20px 20px;
+		text-align: center;
+		border: 2px solid $color-blue;
+		position: fixed;
+		top: 0;
+		left: -100%;
+		z-index: 1000;
+		transition: left 0.2s ease 0s;
+		overflow-y: auto;
+
+		&.open{left: 0;}
+
+		&__close{
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			cursor: pointer;
+		}
+
+		&__logo{
+			max-width: 300px;
+			margin: 0 auto 108px;
+		}
+	}
+
+	.mobile-links{
+		margin-bottom: 95px;
+
+		&__item{
+			@include font(normal, 900, 2.4rem, 1.2, $color-yellow);
+			text-transform: uppercase;
+
+			a{
+				color: $color-yellow;
+				text-decoration: none;
+				transition: color 0.2s ease 0s;
+			}
+
+			a:hover{color: $color-yellow-hover;}
+		}
+
+		&__item:not(:last-child){margin-bottom: 26px;}
+	}
+
+	.main-menu{
+		display: block;
+		&__link{font-size: 2.4rem;}
+		&__link::after{display: none;}
+		&__item{margin-bottom: 12px;}
 	}
 }

@@ -26,6 +26,7 @@
 
 	&__list{
 		width: 420px;
+		max-width: 100%;
 		margin: 0 auto;
 	}
 
@@ -60,4 +61,27 @@
 	}
 
 	&_yellow &__icon{background: $color-blue;}
+}
+
+@media (max-width: 991px) {
+	.compare-advant{
+		&__title{font-size: 3rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.compare-advant-list{display: block;}
+
+	.compare-advant{
+		width: 100%;
+		padding: 60px 25px 80px;
+
+		&__title{
+			font-size: 2.4rem;
+			margin-bottom: 93px;
+		}
+
+		&__list{width: 265px;}
+		&__text{font-size: 1.4rem;}
+	}
 }

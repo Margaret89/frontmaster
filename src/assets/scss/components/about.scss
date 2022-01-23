@@ -13,3 +13,25 @@
 		margin-left: 45px;
 	}
 }
+
+@media (max-width: 1279px) {
+	.about{
+		&__content{flex-direction: column-reverse;}
+		
+		&__img{
+			margin-left: 0;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.about{
+		margin: 44px 0;
+
+		&__img{
+			max-width: 100%;
+			margin-bottom: 15px;
+		}
+	}
+}

@@ -9,6 +9,12 @@ body{
 
 body{font-size: 1.8rem;}
 
+body.no-scroll{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
 *,
 *:before,
 *:after {
@@ -77,7 +83,7 @@ h6,.h6{
 	margin-bottom: 0;
 }
 
-ol{list-style-position: inside;}
+ol, ul{list-style-position: inside;}
 
 .wrapper{
 	display: flex;
@@ -206,27 +212,66 @@ button.btn_small{
 .text-bold {font-weight: 700 !important;}
 
 
-.d-none{display: none;}
-.d-block{display: block;}
-.d-inline{display: inline;}
-.d-inline-block{display: inline-block;}
-.d-flex{display: flex;}
-.d-inline-flex{display: inline-flex;}
+.d-none{display: none!important;}
+.d-block{display: block!important;}
+.d-inline{display: inline!important;}
+.d-inline-block{display: inline-block!important;}
+.d-flex{display: flex!important;}
+.d-inline-flex{display: inline-flex!important;}
 
 @media (min-width: 992px) {
-	.d-lg-none{display: none;}
-	.d-lg-block{display: block;}
-	.d-lg-inline{display: inline;}
-	.d-lg-inline-block{display: inline-block;}
-	.d-lg-flex{display: flex;}
-	.d-lg-inline-flex{display: inline-flex;}
+	.d-lg-none{display: none!important;}
+	.d-lg-block{display: block!important;}
+	.d-lg-inline{display: inline!important;}
+	.d-lg-inline-block{display: inline-block!important;}
+	.d-lg-flex{display: flex!important;}
+	.d-lg-inline-flex{display: inline-flex!important;}
 }
 
 @media (min-width: 768px) {
-	.d-md-none{display: none;}
-	.d-md-block{display: block;}
-	.d-md-inline{display: inline;}
-	.d-md-inline-block{display: inline-block;}
-	.d-md-flex{display: flex;}
-	.d-md-inline-flex{display: inline-flex;}
+	.d-md-none{display: none!important;}
+	.d-md-block{display: block!important;}
+	.d-md-inline{display: inline!important;}
+	.d-md-inline-block{display: inline-block!important;}
+	.d-md-flex{display: flex!important;}
+	.d-md-inline-flex{display: inline-flex!important;}
+}
+
+@media (max-width: 1279px) {
+	.container{padding: 0 80px;}
+}
+
+@media (max-width: 991px) {
+	.container{padding: 0 35px;}
+	.container-fluid{padding: 0 35px;}
+
+	
+	h1,.h1{font-size: 4rem;}
+	h2,.h2{font-size: 3.2rem;}
+	h3,.h3{font-size: 2.8rem;}
+}
+
+@media (max-width: 767px) {
+	.container{padding: 0 15px;}
+	.container-fluid{padding: 0 15px;}
+	main{padding-bottom: 60px;}
+
+	h1,.h1{
+		font-size: 2.8rem;
+		margin-bottom: 3rem;
+	}
+
+	h2,.h2{
+		font-size: 2.4rem;
+		margin-bottom: 2.6rem;
+	}
+
+	h3,.h3{font-size: 2rem;}
+	h3,.h3{font-size: 2rem;}
+
+	.btn,
+	input[type="submit"].btn,
+	button.btn{
+		height: 5rem,;
+	}
 }

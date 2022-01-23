@@ -1,9 +1,10 @@
 footer.footer
-	.offer-block
-		.offer-block__title Обратиться к&nbsp;руководителю
-		.offer-block__text Если у вас возникли вопросы, предложения или жалобы, Вы&nbsp;можете написать об этом коммерческому директору компании
+	.offer-block-wrap
+		.offer-block
+			.offer-block__title Обратиться к&nbsp;руководителю
+			.offer-block__text Если у вас возникли вопросы, предложения или жалобы, Вы&nbsp;можете написать об этом коммерческому директору компании
 
-		a.btn.btn_blue.btn_shadow(href='#') Обратиться<br>к руководителю
+			a.btn.btn_blue.btn_shadow(href='#') Обратиться<br>к руководителю
 				
 	.footer__main-wrap
 		.container-fluid
@@ -35,7 +36,7 @@ footer.footer
 									a(href="mailto:msk@frontmaster.su") msk@frontmaster.su
 								a.btn.btn_border.btn_small(href='mailto:msk@frontmaster.su') Написать нам
 
-				.footer__item
+				.footer__item.d-none.d-lg-block
 					ul.footer-menu
 						li.footer-menu__item
 							a.footer-menu__link(href="#") Каталог продукции
@@ -56,7 +57,7 @@ footer.footer
 									li.footer-menu__sub-item
 										a.footer-menu__sub-link(href="#")= item.text
 					
-				.footer__item
+				.footer__item.d-none.d-lg-block
 					ul.footer-menu
 						-
 							var list=[
@@ -70,7 +71,7 @@ footer.footer
 							li.footer-menu__item
 								a(href="#").footer-menu__link= item.text
 
-				.footer__item
+				.footer__item.d-none.d-lg-block
 					ul.footer-menu
 						-
 							var list=[
@@ -111,7 +112,7 @@ footer.footer
 			.footer__soc
 				form.form-subscribe
 					.form-subscribe__content
-						.form-subscribe__label Подписатьсяна рассылку:
+						.form-subscribe__label Подписаться на рассылку:
 						input(type="text", placeholder="Введите ваш E-mail")
 						input.btn(type="submit", value="Подписаться")
 						

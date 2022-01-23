@@ -57,6 +57,7 @@ block content
 						+svg('ic-person-fill','ic-person-fill', '52', '52')
 					.advant__text
 						|Мастера
+						| 
 						br
 						|славяне
 
@@ -65,6 +66,7 @@ block content
 						img(src="assets/img/ic-return.png", alt="")
 					.advant__text
 						|Возврат товара
+						| 
 						br
 						|100 дней
 
@@ -73,6 +75,7 @@ block content
 						img(src="assets/img/ic-setting.png", alt="")
 					.advant__text
 						|Профессиональное
+						| 
 						br
 						|оборудование
 
@@ -81,6 +84,7 @@ block content
 						+svg('ic-guarantee','ic-guarantee', '50', '50')
 					.advant__text
 						|Более 500
+						| 
 						br
 						|выполненых работ
 
@@ -89,6 +93,7 @@ block content
 						+svg('ic-house','ic-house', '50', '50')
 					.advant__text
 						|Не требуют
+						| 
 						br
 						|проживание
 				
@@ -400,10 +405,10 @@ block content
 			h2 Вы всегда сможете понять как будет выглядеть ваш дом благодаря нашей разработке - Визуализация
 
 			.visual
-				.visual__item
+				.visual__item.d-none.d-md-block
 					img(src='assets/img/visual1.jpg' alt='')
 
-				.visual__item
+				.visual__item.d-none.d-md-block
 					img(src='assets/img/visual2.jpg' alt='')
 
 				.form-site-wrap.js-valid-form
@@ -586,11 +591,17 @@ block content
 					]
 				each item in list
 					.review-slider__item
-						.review-slider__photo(style="background-image: url(assets/img/"+item.img+")")
+						.review-slider__top
+							.review-slider__photo(style="background-image: url(assets/img/"+item.img+")")
+							
+							.review-slider__info.d-md-none
+								.review-slider__name= item.name
+								.review-slider__age= item.age
+
 
 						.review-slider__content
-							.review-slider__name= item.name
-							.review-slider__age= item.age
+							.review-slider__name.d-none.d-md-block= item.name
+							.review-slider__age.d-none.d-md-block= item.age
 							.review-slider__text.js-short-text(data-count="225")= item.text
 
 							.review-slider__btn
@@ -607,9 +618,9 @@ block content
 			.review-soc
 				-
 					var list=[
-						{img:'yell.png'},
-						{img:'ya.png'},
-						{img:'like.png'},
+						{img:'yell.jpg'},
+						{img:'ya.jpg'},
+						{img:'like.jpg'},
 					]
 				each item in list
 					.review-soc__item
@@ -647,6 +658,7 @@ block content
 							br
 							| +7 (926) 653-71-41
 
+							br
 							a.btn(data-fancybox='' data-src='#feadback' href='javascript:;')
 								+svg('ic-phone','ic-phone', '18', '18')
 								span Заказать звонок

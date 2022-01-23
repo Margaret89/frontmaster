@@ -73,3 +73,20 @@
 	&__label{padding-right: 5px;}
 	&__val{padding-left: 5px;}
 }
+
+@media (max-width: 1400px) {
+	.material-card{
+		width: calc(33.33% - 30px);
+		margin: 0 15px 45px;
+	}
+
+	.material-card-list{margin: 0 -15px;}
+}
+
+@media (max-width: 767px) {
+	.material{margin: 44px 0;}
+
+	.material-card{
+		width: calc(100% - 30px);
+	}
+}

@@ -1,5 +1,34 @@
 import {$, Inputmask} from './common';
 
+var widthWindow = $(window).width();
+var deviceType = 'desktop';
+var changeDevice = false;
+
+if(widthWindow < 768){
+	deviceType = 'mobile';
+}else if(widthWindow >= 768 && widthWindow < 992){
+	deviceType = 'tablet';
+}else{
+	deviceType = 'desktop';
+}
+
+$(window).on('resize', function(){
+	widthWindow = $(window).width();
+
+	if(widthWindow < 768 && deviceType == 'tablet'){
+		deviceType = 'mobile';
+		changeDevice = true;
+	}else if((widthWindow >= 768 && deviceType == 'mobile') ||(widthWindow < 992 && deviceType == 'desktop')){
+		deviceType = 'tablet';
+		changeDevice = true;
+	}else if(widthWindow >= 992 && deviceType == 'tablet'){
+		deviceType = 'desktop';
+		changeDevice = true;
+	}else{
+		changeDevice = false;
+	}
+});
+
 // Маска для телефона
 Inputmask('+7 (999) 999-9999').mask('.js-phone');
 
@@ -173,3 +202,93 @@ if($('.js-review-slider').length){
 		nextArrow: '<button id="next" type="button" class="slider-nav__arr slider-nav__arr_right"><svg class="icon ic-arrow-right" width="10" height="19"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
 	});
 }
+// Добавление пункта "еще" в меню
+if ($('.js-header').length) {
+	if(deviceType == 'desktop'){
+		var arrItems = []; //массив пунктов меню
+
+		//Собираем массив  ширинами элементов меню
+		$('.js-main-menu-item').each(function() {
+			arrItems.push($(this).outerWidth(true));
+		});
+
+		moreMenu();
+	}
+
+	$(window).on('resize', function(){
+		if(deviceType == 'desktop' && changeDevice == true){
+			//Собираем массив с элементами меню
+			arrItems = [];
+
+			$('.js-main-menu-item').each(function() {
+				arrItems.push($(this).outerWidth(true));
+			});
+		}
+
+		if(deviceType == 'desktop'){
+			moreMenu();
+		}
+		
+		if(deviceType == 'tablet' && changeDevice == true){
+			$('.js-main-menu-more-sub').children('.js-main-menu-item').each(function() {
+				$(this).appendTo('.js-main-menu');
+				$('.js-main-menu-more').remove();
+			});
+		}
+	});
+
+	function moreMenu() {
+		let widthElems = 0; //Ширина всех элементов шапки кроме меню
+		let widthMenu = 0; //Ширина самого меню
+		let widthCurMenu = 0; //Ширина нового меню
+		let widthHeader = $('.js-header').width(); //Ширина шапки без padding
+		let countCurItem = $('.js-main-menu').children('.js-main-menu-item').length;
+
+		for (let index = 0; index < arrItems.length; index++) {
+			widthMenu = widthMenu + arrItems[index];
+		}
+
+		// Вычисляем сумму ширин элементов шапки кроме меню
+		$('.js-header > *').each(function() {
+			if(!$(this).hasClass('js-main-menu-wrap')){
+				widthElems = widthElems + $(this).outerWidth(true);
+			}
+		});
+		
+		if((widthElems+widthMenu) > widthHeader || countCurItem != arrItems.length){
+			widthCurMenu = widthHeader - widthElems - 100; // Вычисляем новую ширину меню
+
+			// Добавляем пункт "еще", если его нет
+			if(!$('.js-main-menu-more').length){
+				$('.js-main-menu').append('<li class="main-menu__item js-main-menu-more"><span class="main-menu__link">Еще...</span><ul class="main-menu__sub-more js-main-menu-more-sub"></ul></li>');
+			}
+
+			// Добавляем/Удаляем пункты меню
+			for (let index = 0; index < arrItems.length; index++) {
+				if(widthCurMenu < arrItems[index]){
+					widthCurMenu = 0;
+					$('.js-main-menu-item[data-num='+index+']').appendTo('.js-main-menu-more-sub');
+				}else{
+					widthCurMenu = widthCurMenu - arrItems[index];
+
+					if(countCurItem < (index+1)){
+						$('.js-main-menu-more').before($('.js-main-menu-item[data-num='+index+']'));
+					}
+				}
+			}
+		}else{
+			$('.js-main-menu-more').remove();
+		}
+	}
+}
+
+// Открыть/Закрыть мобильное меню
+$('.js-open-menu').on('click',function(){
+	$('.js-main-menu-wrap').addClass('open');
+	$('.js-body').addClass('no-scroll');
+});
+
+$('.js-close-menu').on('click',function(){
+	$('.js-main-menu-wrap').removeClass('open');
+	$('.js-body').removeClass('no-scroll');
+});
