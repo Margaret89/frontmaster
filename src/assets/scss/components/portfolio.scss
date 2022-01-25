@@ -6,9 +6,11 @@
 	flex-wrap: wrap;
 	margin: -6px -17px;
 
-	&__item {
+	&__item{
 		width: calc(33.33% - 34px);
 		margin: 6px 17px;
+		position: relative;
+		overflow: hidden;
 	}
 
 	&__img{
@@ -19,7 +21,6 @@
 		background-size: cover;
 		border-left: 7px solid $color-yellow;
 		position: relative;
-		cursor: zoom-in;
 	}
 
 	&__img::before{
@@ -34,7 +35,7 @@
 		transition: opacity 0.2s ease 0s;
 	}
 
-	&__img:hover::before{opacity: 0;}
+	&__item:hover .portfolio-info{opacity: 1;}
 }
 
 .portfolio-info{
@@ -44,6 +45,14 @@
 	width: 100%;
 	height: 100%;
 	@include font(normal, normal, 2.4rem, 1.15, $color-text);
+	background: #fff;
+	padding: 10px;
+	overflow-y: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.2s ease 0s;
 
 	&__content{max-width: 288px;}
 	&__item:not(:last-child){margin-bottom: 35px;}

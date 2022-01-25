@@ -256,34 +256,31 @@ block content
 			h2 Наши работы
 
 			.portfolio
-				.portfolio__item
-					a(href='assets/img/portfolio1.jpg', data-fancybox='portfolio').portfolio__img(style="background-image: url(assets/img/portfolio1.jpg)")
-					
-				.portfolio__item
-					a(href='assets/img/portfolio2.jpg', data-fancybox='portfolio').portfolio__img(style="background-image: url(assets/img/portfolio2.jpg)")
+				-
+					var list=[
+						{img:'portfolio1.jpg'},
+						{img:'portfolio2.jpg'},
+						{img:'portfolio1.jpg'},
+						{img:'portfolio2.jpg'},
+						{img:'portfolio1.jpg'},
+						{img:'portfolio2.jpg'},
+					]
+				each item in list
+					.portfolio__item
+						.portfolio__img(style="background-image: url(assets/img/"+item.img+")")
+	
+						.portfolio-info
+							.portfolio-info__content
+								.portfolio-info__item
+									.portfolio-info__label Адрес:
+									.portfolio-info__text
+										b Одинцовский р-он, д.&nbsp;Марьтьяново
 
-				.portfolio__item
-					a(href='assets/img/portfolio1.jpg', data-fancybox='portfolio').portfolio__img(style="background-image: url(assets/img/portfolio1.jpg)")
+								.portfolio-info__item
+									.portfolio-info__label Цена:
+									.portfolio-info__text 1 732 000 руб.
 
-				.portfolio__item
-					a(href='assets/img/portfolio2.jpg', data-fancybox='portfolio').portfolio__img(style="background-image: url(assets/img/portfolio2.jpg)")
-
-				.portfolio__item
-					a(href='assets/img/portfolio1.jpg', data-fancybox='portfolio').portfolio__img(style="background-image: url(assets/img/portfolio1.jpg)")
-
-				.portfolio__item
-					.portfolio-info
-						.portfolio-info__content
-							.portfolio-info__item
-								.portfolio-info__label Адрес:
-								.portfolio-info__text
-									b Одинцовский р-он, д.&nbsp;Марьтьяново
-
-							.portfolio-info__item
-								.portfolio-info__label Цена:
-								.portfolio-info__text 1 732 000 руб.
-
-							a.btn(href='#') Хочу так же!
+								a.btn(href='#') Хочу так же!
 
 	section.steps-wrap
 		.container
