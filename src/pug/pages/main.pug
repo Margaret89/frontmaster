@@ -578,53 +578,57 @@ block content
 		.container
 			h2 Довольные клиенты
 
-			.review-slider.js-review-slider
-				-
-					var list=[
-						{img:'woman.jpg', name:'Ирина Игнатьева,', age:'38 лет', text:'Большое спасибо компании "Фронтмастер" за качественные услуги по отделке дома. Отдельная благодарность бригаде монтажников Войтовых: Евгению и Михаилу. Ребята добросовестные, аккуратные. Работают слаженно, быстро и качественно, слаженно, быстро и качественно'},
-						{img:'woman.jpg', name:'Мария Конова,', age:'24 лет', text:'Большое спасибо компании "Фронтмастер".'},
-						{img:'woman.jpg', name:'Катерина Сорокина,', age:'18 лет', text:'Большое спасибо компании "Фронтмастер" за качественные услуги по отделке дома. Отдельная благодарность бригаде монтажников Войтовых: Евгению и Михаилу. Ребята добросовестные, аккуратные. Работают слаженно, быстро и качественно, слаженно, быстро и качественно'},
-						{img:'woman.jpg', name:'Елена Иванова,', age:'22 лет', text:'Большое спасибо компании "Фронтмастер" за качественные услуги по отделке дома. Отдельная благодарность бригаде монтажников Войтовых: Евгению и Михаилу. Ребята добросовестные, аккуратные. Работают слаженно, быстро и качественно, слаженно, быстро и качественно'},
-					]
-				each item in list
-					.review-slider__item
-						.review-slider__top
-							.review-slider__photo(style="background-image: url(assets/img/"+item.img+")")
-							
-							.review-slider__info.d-md-none
-								.review-slider__name= item.name
-								.review-slider__age= item.age
+			.review-slider-wrap__content
+				.review-slider-wrap__main
+					.review-slider.js-review-slider
+						-
+							var list=[
+								{img:'woman.jpg', name:'Ирина Игнатьева,', age:'38 лет', text:'Большое спасибо компании "Фронтмастер" за качественные услуги по отделке дома. Отдельная благодарность бригаде монтажников Войтовых: Евгению и Михаилу. Ребята добросовестные, аккуратные. Работают слаженно, быстро и качественно, слаженно, быстро и качественно'},
+								{img:'woman.jpg', name:'Мария Конова,', age:'24 лет', text:'Большое спасибо компании "Фронтмастер".'},
+								{img:'woman.jpg', name:'Катерина Сорокина,', age:'18 лет', text:'Большое спасибо компании "Фронтмастер" за качественные услуги по отделке дома. Отдельная благодарность бригаде монтажников Войтовых: Евгению и Михаилу. Ребята добросовестные, аккуратные. Работают слаженно, быстро и качественно, слаженно, быстро и качественно'},
+								{img:'woman.jpg', name:'Елена Иванова,', age:'22 лет', text:'Большое спасибо компании "Фронтмастер" за качественные услуги по отделке дома. Отдельная благодарность бригаде монтажников Войтовых: Евгению и Михаилу. Ребята добросовестные, аккуратные. Работают слаженно, быстро и качественно, слаженно, быстро и качественно'},
+							]
+						each item in list
+							.review-slider__item
+								.review-slider__top
+									.review-slider__photo(style="background-image: url(assets/img/"+item.img+")")
+									
+									.review-slider__info.d-md-none
+										.review-slider__name= item.name
+										.review-slider__age= item.age
 
 
-						.review-slider__content
-							.review-slider__name.d-none.d-md-block= item.name
-							.review-slider__age.d-none.d-md-block= item.age
-							.review-slider__text.js-short-text(data-count="225")= item.text
+								.review-slider__content
+									.review-slider__name.d-none.d-md-block= item.name
+									.review-slider__age.d-none.d-md-block= item.age
+									.review-slider__text.js-short-text(data-count="225")= item.text
 
-							.review-slider__btn
-								a.btn.btn_shadow(href='#') Хочу также!
-								a.btn.btn_border.btn_shadow(href='#')
-									span Смотреть объект
-									+svg('ic-arr-right','ic-arr-right', '28', '20')
+									.review-slider__btn
+										a.btn.btn_shadow(href='#') Хочу также!
+										a.btn.btn_border.btn_shadow(href='#')
+											span Смотреть объект
+											+svg('ic-arr-right','ic-arr-right', '28', '20')
 
-			.review-slider-wrap__nav
-				.slider-nav.js-review-slider-nav
+					.review-slider-wrap__nav
+						.slider-nav.js-review-slider-nav
 
-	section.review-soc-wrap
-		.container
-			.review-soc
-				-
-					var list=[
-						{img:'yell.jpg'},
-						{img:'ya.jpg'},
-						{img:'like.jpg'},
-					]
-				each item in list
-					.review-soc__item
-						.review-soc__img
-							img(src="assets/img/"+item.img, alt="")
+				.review-soc
+					-
+						var list=[
+							{img:'yell.jpg'},
+							{img:'ya.jpg'},
+							{img:'like.jpg'},
+						]
+					each item in list
+						.review-soc__item
+							.review-soc__img
+								img(src="assets/img/"+item.img, alt="")
 
-						a.btn.btn_shadow(href='#') Читать отзывы
+							a.btn.btn_shadow(href='#') Читать отзывы
+
+	//- section.review-soc-wrap
+	//- 	.container
+			
 
 
 	section.contacts
